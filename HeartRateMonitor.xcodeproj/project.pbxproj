@@ -14,6 +14,8 @@
 		3F692995299DEB5D004AE4ED /* HeartRateMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F692994299DEB5D004AE4ED /* HeartRateMonitorTests.swift */; };
 		3F69299F299DEB5D004AE4ED /* HeartRateMonitorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69299E299DEB5D004AE4ED /* HeartRateMonitorUITests.swift */; };
 		3F6929A1299DEB5D004AE4ED /* HeartRateMonitorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6929A0299DEB5D004AE4ED /* HeartRateMonitorUITestsLaunchTests.swift */; };
+		3F6929AF299DF69F004AE4ED /* CoreBluetoothViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6929AE299DF69F004AE4ED /* CoreBluetoothViewModel.swift */; };
+		3F6929B0299DF69F004AE4ED /* CoreBluetoothViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6929AE299DF69F004AE4ED /* CoreBluetoothViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,9 @@
 		3F69299A299DEB5D004AE4ED /* HeartRateMonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeartRateMonitorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F69299E299DEB5D004AE4ED /* HeartRateMonitorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateMonitorUITests.swift; sourceTree = "<group>"; };
 		3F6929A0299DEB5D004AE4ED /* HeartRateMonitorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateMonitorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3F6929AE299DF69F004AE4ED /* CoreBluetoothViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreBluetoothViewModel.swift; sourceTree = "<group>"; };
+		3F6929B1299DFA15004AE4ED /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3F6929B2299DFA87004AE4ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,7 @@
 		3F692977299DEB5C004AE4ED = {
 			isa = PBXGroup;
 			children = (
+				3F6929B1299DFA15004AE4ED /* README.md */,
 				3F692982299DEB5C004AE4ED /* HeartRateMonitor */,
 				3F692993299DEB5D004AE4ED /* HeartRateMonitorTests */,
 				3F69299D299DEB5D004AE4ED /* HeartRateMonitorUITests */,
@@ -94,6 +100,8 @@
 		3F692982299DEB5C004AE4ED /* HeartRateMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				3F6929B2299DFA87004AE4ED /* Info.plist */,
+				3F6929AD299DF671004AE4ED /* ViewModel */,
 				3F692983299DEB5C004AE4ED /* HeartRateMonitorApp.swift */,
 				3F692985299DEB5C004AE4ED /* ContentView.swift */,
 				3F692987299DEB5D004AE4ED /* Assets.xcassets */,
@@ -125,6 +133,14 @@
 				3F6929A0299DEB5D004AE4ED /* HeartRateMonitorUITestsLaunchTests.swift */,
 			);
 			path = HeartRateMonitorUITests;
+			sourceTree = "<group>";
+		};
+		3F6929AD299DF671004AE4ED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3F6929AE299DF69F004AE4ED /* CoreBluetoothViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +275,7 @@
 			files = (
 				3F692986299DEB5C004AE4ED /* ContentView.swift in Sources */,
 				3F692984299DEB5C004AE4ED /* HeartRateMonitorApp.swift in Sources */,
+				3F6929AF299DF69F004AE4ED /* CoreBluetoothViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6929B0299DF69F004AE4ED /* CoreBluetoothViewModel.swift in Sources */,
 				3F692995299DEB5D004AE4ED /* HeartRateMonitorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,7 +438,8 @@
 				DEVELOPMENT_TEAM = HKXZTH4YA3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = HeartRateMonitor/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Used to connect with devices via Bluetooth.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -449,7 +468,8 @@
 				DEVELOPMENT_TEAM = HKXZTH4YA3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = HeartRateMonitor/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Used to connect with devices via Bluetooth.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

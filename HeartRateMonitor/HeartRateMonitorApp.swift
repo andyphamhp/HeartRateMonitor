@@ -12,6 +12,7 @@ struct HeartRateMonitorApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(CoreBluetoothViewModel())
         }
     }
 }

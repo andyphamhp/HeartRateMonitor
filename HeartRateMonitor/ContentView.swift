@@ -6,16 +6,26 @@
 //
 
 import SwiftUI
+import CoreBluetooth
 
 struct ContentView: View {
+    
+    @EnvironmentObject var bleManager: CoreBluetoothViewModel
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack {
+                Text("Current Heart Rate")
+                Text(bleManager.heartRate.description)
+                    .font(.largeTitle)
+                Text("Hello, world!")
+                Text("Body Sensor Location")
+                Text(bleManager.bodySensorLocation)
+                    .font(.largeTitle)
+            }
+            .padding()
+            .navigationTitle("Heart Rate Monitor")
         }
-        .padding()
     }
 }
 
